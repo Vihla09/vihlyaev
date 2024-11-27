@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Company</title>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header" id="header">
+        <div class="container header-container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="img/logo.png">
+                </div>
+                <h2>С помощью нас вы сможете создать то, о чем</h2>
+                <h1>желаете!</h1>
+                <p>Наши возможности + опыт позволят Вам достичь огромного успеха. Мы верим в Вас! И знаем это на все 100%. Вас не остановить!</p>
+                <button class="button" onclick="changeHeaderBackground()">Отгадай какой сейчас!</button>
+            </div>
+            <div class="header-image">
+                <img src="img/header-img.png">
+            </div>
+        </div>
+    </header>
+
+    <section class="features" id="features">
+        <div class="container">
+            <h2>Что Вам необходимо?</h2>
+            <div class="features-grid">
+                <div class="item">
+                    <img src="img/f3.png">
+                    <h3>Первый блок</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                </div>
+                <div class="item">
+                    <img src="img/f4.png">
+                    <h3>Второй блок</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                </div>
+                <div class="item">
+                    <img src="img/f5.png">
+                    <h3>Третий блок</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <h2>Форма заказа продукта или услуги</h2>
+            <form action="#" class="contact-form" id="orderForm" onsubmit="formSubmit();">
+                <input class="form-control" id="firstName" type="text" placeholder="Имя" onchange="checkFirstName();" required />
+                <input class="form-control" id="lastName" type="text" placeholder="Фамилия" onchange="checkLastName();" required />
+                <input class="form-control" id="email" type="email" placeholder="Введите ваш Email" onchange="checkEmail();" required />
+                <input class="form-control" id="phone" type="tel" placeholder="Телефон" onchange="checkPhone();" required />
+                <input class="form-control" id="orderDetails" type="text" placeholder="Что бы вы хотели заказать?" onchange="checkOrderDetails();" required />
+                <input class="form-control" id="quantity" type="number" placeholder="Количество" onchange="checkQuantity();" required />
+                <button type="submit" class="bigbutton">Отправить вопрос!</button>
+            </form>
+        </div>
+        <div id="formOutput" class="form-output"></div>
+	 <button class="button" onclick="changeformOutputBackground()">Изменить цвет фона</button>
+    </section>
+    
+    <section class="contact">
+        <div class="container">
+            <h2>Форма заказа обратного звонка</h2>
+            <form action="#" class="contact-form">
+                <input type="text" name="name" placeholder="Имя" required minlength="2" maxlength="50" 
+                    title="Введите имя (2-50 символов)">
+                <input type="email" name="email" placeholder="Введите ваш Email" required 
+                    title="Введите корректный email-адрес">
+                <input type="tel" name="phone" placeholder="Телефон" required pattern="\+?[0-9]{10,15}" 
+                    title="Введите номер телефона в формате +1234567890 (от 10 до 15 цифр)">
+                <input type="text" name="question" placeholder="Какие у вас есть вопросы?" maxlength="500" 
+                    title="Максимум 500 символов">
+                <button type="submit" class="bigbutton">Отправить вопрос!</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© На этом сайте защищать нечего</p>
+        </div>
+    </footer>
+
+    <script src="js/JavaScript.js"></script>
+
+</body>
+</html>
